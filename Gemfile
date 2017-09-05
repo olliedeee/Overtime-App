@@ -18,6 +18,7 @@ gem 'devise', '~> 4.2'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'jquery-rails' 
 gem 'listen'
+gem 'gritter', "1.2.0"
 
 
 # Use Capistrano for deployment
