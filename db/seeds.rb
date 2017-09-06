@@ -6,11 +6,11 @@ puts "One user created"
 
 puts "One admin created"
 25.times do |post|
-  Post.create!(date: Date.today, rationale:"This is the rationale for post number #{post} and was created by #{@user.full_name}", user_id: @user.id)
+  Post.create!(date: Date.today, rationale:"This is the rationale for post number #{post} and was created by #{@user.full_name}", user_id: @user.id, overtime_request: 2.5)
 end
 
 25.times do |post|
-  Post.create!(date: Date.today, rationale:"This is the rationale for post number #{post} and was created by #{@admin.full_name}", user_id: @admin.id)
+  Post.create!(date: Date.today, rationale:"This is the rationale for post number #{post} and was created by #{@admin.full_name}", user_id: @admin.id, overtime_request: 1.5)
 end
 
 puts "50 posts have been created"
