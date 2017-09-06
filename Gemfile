@@ -33,11 +33,14 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.5'
+  gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+  
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
