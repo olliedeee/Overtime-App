@@ -21,6 +21,7 @@ gem 'listen'
 gem 'gritter', "1.2.0"
 gem 'administrate'
 gem 'bourbon'
+gem 'pundit'
 
 
 # Use Capistrano for deployment
