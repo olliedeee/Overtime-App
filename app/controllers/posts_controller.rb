@@ -1,10 +1,15 @@
 class PostsController < ApplicationController
-	before_action :set_post, only: [:show, :edit, :update, :destroy]
+	before_action :set_post, only: [:show, :edit, :update, :destroy, :approve]
 	
 	def index
 		@posts = Post.posts_by(current_user).page(params[:page]).per(10)
 		# pre-kaminari this was: 		@posts = Post.posts_by current_user
+	end
 
+	def approve
+		authorize @post
+		@post.approved!
+		redirect_to root_path, notice: "Post has been approved!"
 	end
 
 	def new
