@@ -23,6 +23,7 @@ gem 'administrate'
 gem 'bourbon'
 gem 'pundit'
 gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
+gem 'kaminari'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
