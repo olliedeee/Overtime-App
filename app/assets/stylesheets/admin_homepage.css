@@ -16,3 +16,8 @@ padding: 20px;
 .pending-details {
   font-weight: 900;
 }
+
+.homepage-block:hover {
+  background-color:     #01344b;
+
+}
