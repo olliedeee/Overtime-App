@@ -7,7 +7,6 @@ end
 
 
 gem 'rails', '~> 5.1.3'
-gem 'sqlite3'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -25,6 +24,7 @@ gem 'pundit'
 gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
 gem 'kaminari'
 
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -35,6 +35,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.5'
   gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+  gem 'sqlite3'
+
   
 end
 
@@ -42,6 +44,10 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   
+end
+
+group :production do
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
