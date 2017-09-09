@@ -37,7 +37,8 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.5'
   gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
   gem 'sqlite3'
-
+  gem "better_errors"
+  gem "binding_of_caller"
   
 end
 
