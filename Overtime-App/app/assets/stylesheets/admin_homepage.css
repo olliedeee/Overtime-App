@@ -1,0 +1,23 @@
+.pending-data {
+margin: 20px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+background-color:  #DAECF3;
+padding: 20px;
+}
+
+.homepage-block {
+  margin: 12px 40px;
+  padding: 15px;
+  background-color: #012D41;
+  color: white;
+}
+.pending-details {
+  font-weight: 900;
+}
+
+.homepage-block:hover {
+  background-color:     #01344b;
+
+}

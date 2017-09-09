@@ -1,0 +1,5 @@
+<% if admin_types.include?(current_user.type) %>
+	<%= render 'admin' %>
+<% else %>
+	<%= render 'employee' %>
+<% end %>
