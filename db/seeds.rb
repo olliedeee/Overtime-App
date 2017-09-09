@@ -3,8 +3,8 @@
 puts "One user created"
 
 
-@admin = AdminUser.create!(email: "oliverbucks@gmail.com", password:"password",
-        password_confirmation: "password", first_name: "Admin", last_name: "Surname", phone:"12345678901")
+@admin = AdminUser.create!(email: "oliverbucks@gmail.com", password:"password1",
+        password_confirmation: "password1", first_name: "Admin", last_name: "Surname", phone:"12345678901")
 
 AuditLog.create!(start_date: Date.today-6.days, user_id: @user.id, status: 0)
 AuditLog.create!(start_date: Date.today-13.days, user_id: @user.id, status: 0)
