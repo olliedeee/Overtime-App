@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class UserDashboard < Administrate::BaseDashboard
+class EmployeeDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     posts: Field::HasMany.with_options(searchable: false),
     id: Field::Number.with_options(searchable: false),
@@ -48,5 +48,6 @@ class UserDashboard < Administrate::BaseDashboard
     :first_name,
     :last_name,
     :phone,
+    :type,
   ].freeze
 end
