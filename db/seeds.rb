@@ -3,7 +3,7 @@
 puts "One user created"
 
 
-@admin = AdminUser.create!(email: "admin@test.com", password:"password",
+@admin = AdminUser.create!(email: "oliverbucks@gmail.com", password:"password",
         password_confirmation: "password", first_name: "Admin", last_name: "Surname", phone:"12345678901")
 
 puts "One admin created"
