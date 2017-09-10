@@ -7,6 +7,9 @@ class User < ApplicationRecord
   validates_presence_of :first_name, :last_name
   has_many :posts
   has_many :audit_logs
+  
+  has_many :hands_associations, class_name: 'Hand'
+  has_many :hands, through: :hands_associations
  
   PHONE_REGEX = /\A[0-9]*\Z/
   

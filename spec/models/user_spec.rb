@@ -40,5 +40,16 @@ RSpec.describe User, type: :model do
     it 'has a full name method that combines first and last name' do
       expect(@user.full_name).to eq("SNOW, JON")
     end
+    
+    describe 'relationship between admin and employees' do
+      it 'allows for admins to be assocaited with multiple employees' do
+      employee_1 = FactoryGirl.create(:user)
+      employee_2 = FactoryGirl.create(:user)
+      admin = FactoryGirl.create(:admin_user)
+      Hand.create!(user_id: admin.id, hand_id: employee_1.id)
+      Hand.create!(user_id: admin.id, hand_id: employee_2.id)
+      expect(admin.hands.count).to eq(2)
+      end
+    end  
   end
 end
