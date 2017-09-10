@@ -21,7 +21,7 @@ describe 'navigate' do
   	end
 
   	it 'has a title of Posts' do
-  		expect(page).to have_content(/Entries/)
+  		expect(page).to have_content(/Posts/)
   	end
 
     it 'has a list of posts' do
@@ -43,6 +43,8 @@ describe 'navigate' do
 
   describe 'new' do
     it 'has a link from the homepage' do
+      employee = Employee.create(email:"email@employee.com", password:"password", password_confirmation:"password", phone:"123456789112")
+      login_as(employee, :scope=> :user)
       visit root_path
 
       click_link("new_post_from_nav")
