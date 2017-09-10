@@ -3,6 +3,8 @@
 										password_confirmation: "password",
 										first_name: "Jon",
 										last_name: "Snow",
+										ssn: 1234,
+										company: "ABC company",
 										phone: "07501380210")
 
 puts "1 employee created"
@@ -12,6 +14,8 @@ puts "1 employee created"
 									password_confirmation: "password",
 									first_name: "Admin",
 									last_name: "Name",
+									ssn: 1235,
+									company: "ABC company",
 									phone: "01234567891")
 
 puts "1 Admin user created"
