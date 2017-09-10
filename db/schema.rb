@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170910140843) do
+ActiveRecord::Schema.define(version: 20170910143737) do
 
   create_table "audit_logs", force: :cascade do |t|
     t.integer "user_id"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20170910140843) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "status", default: 0
-    t.decimal "overtime_request", default: "0.0"
+    t.decimal "daily_hours", default: "0.0"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 

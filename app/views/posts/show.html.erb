@@ -1,7 +1,7 @@
 <div> <h2><%= @post.rationale %> </h2></div>
 <div class="well">
 <div><span>Employee: </span><%= @post.user.full_name %></div>
-<div><span>Overtime Hours Requested: </span><%= @post.overtime_request %></div>
+<div><span>Overtime Hours Requested: </span><%= @post.daily_hours %></div>
 <div><span>Date: </span><%= @post.date %></div>
 <div><span>Status: </span><%= @post.status %></div><br>
 <%= link_to "Edit post", edit_post_path(@post), class: "btn btn-primary" if policy(@post).update? %>
