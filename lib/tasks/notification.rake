@@ -7,6 +7,7 @@ namespace :notification do
       https://ollie-overtime-app-test.herokuapp.com/"
       
       employees.each do |employee|
+        AuditLog.create!(user_id: employee.id)
         cut_phone = employee.phone[1..-1]
         SmsTool.send_sms(number: cut_phone, message: notification_message)
       end
@@ -24,5 +25,7 @@ namespace :notification do
       end
     end
   end
+  
+
 
 end
