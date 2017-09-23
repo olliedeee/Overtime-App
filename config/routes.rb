@@ -17,8 +17,11 @@ Rails.application.routes.draw do
   resources :posts do
     member do
       get :approve
+      get :send_text
+      get :send_email
     end
   end
+  
 
   devise_for :users, skip: [:registrations]
   root to: 'static#homepage'

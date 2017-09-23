@@ -1,11 +1,28 @@
 class PostsController < ApplicationController
-	before_action :set_post, only: [:show, :edit, :update, :destroy, :approve]
+	before_action :set_post, only: [:show, :edit, :update, :destroy, :approve, :send_text, :send_email]
+	
+	
 	
 	def index
 		@posts = Post.posts_by(current_user).page(params[:page]).per(10)
 		# pre-kaminari this was: 		@posts = Post.posts_by current_user
 	end
-
+	
+	def send_text
+		authorize @post
+		employee_number = @post.user.phone[1..-1]
+		SmsTool.send_sms(number: employee_number, message: "Can I press a button and send a text? Yes I can.")
+		redirect_to root_path, notice: "Text sent (maybe)"
+	end
+	
+	def send_email
+		authorize @post
+		employee_email = @post.user.email
+		SmsTool.send_sms(number: employee_number, message: "Can I press a button and send a text? Yes I can.")
+		redirect_to root_path, notice: "Text sent (maybe)"
+	end
+	
+	
 	def approve
 		authorize @post
 		@post.approved!
