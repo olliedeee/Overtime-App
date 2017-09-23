@@ -3,8 +3,12 @@ namespace :notification do
   task sms: :environment do
     # if Time.now.sunday?
       employees = Employee.all  
-      notification_message = "Please log into the overtime management dashboard to request overtime or confirm your hours for last week:
-      https://ollie-overtime-app-test.herokuapp.com/"
+      notification_message = "Calories: Breakfast - 20%,
+      Lunch - 33%,
+      Dinner - 33%,
+      Snacks -10%
+      
+      What GM Goal has been completed today?"
       
       employees.each do |employee|
         AuditLog.create!(user_id: employee.id)
