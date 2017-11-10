@@ -3,13 +3,11 @@ namespace :notification do
   task sms: :environment do
     # if Time.now.sunday?
       employees = Employee.all  
-      notification_message = "Calories: Breakfast - 20%,
-      Lunch - 33%,
-      Dinner - 33%,
-      Snacks -10%
+      notification_message = "
       
-      What GM Goal has been completed today?"
-      
+      We have only now, only this single eternal moment opening and unfolding before us, day and night."
+
+
       employees.each do |employee|
         AuditLog.create!(user_id: employee.id)
         cut_phone = employee.phone[1..-1]
